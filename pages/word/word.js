@@ -12,16 +12,18 @@ Page({
     vocListMax: 12346
   },
 
-  onLoad: () => {
+  onLoad: function(options) {
     //从本地缓存单词表选取第一个单词
+    let that = this;
+    console.log(that.data)
     var idx = Math.floor(Math.random() * this.data.worldListMax) + 1
     var word = list.wordList[idx]
-
+    console.log("ehllo")
     this.setData({
       content: word.content,
       pron: word.pron,
       definition: word.definition,
-      audioUrl: null
+      audioUrl: `http://dict.youdao.com/dictvoice?audio=${word.content}`,
     })
   },
 
@@ -31,40 +33,50 @@ Page({
     })
   },
 
-  next: () => {
+  next: function(options) {
     this.setData({
       showNot: false
     })
 
-    const { vocListMax, content, audioUrl } = this.data
+    const { worldListMax, content, audioUrl } = this.data
 
     // 从vocabulary.js中选取下一个单词
-    let idx = Math.floor(Math.random() * vocListMax) + 1
+    let idx = Math.floor(Math.random() * worldListMax) + 1
+    
+    console.log(idx)
+    console.log(list.wordList.length)
     this.setData({
-      content: vocList.wordList[idx],
+      content: list.wordList[idx].content,
+      audioUrl: `http://dict.youdao.com/dictvoice?audio=${list.wordList[idx].content}`,
+      pron: list.wordList[idx].pron,
+      definition: list.wordList[idx].definition
     })
+    innerAudioContext.src = this.audioUrl
+    console.log(content)
+    // wx.request({
+    //   url: `https://api.shanbay.com/bdc/search/?word=${content}`,
+    //   data: {},
+    //   method: 'GET',
+    //   success: res => {
+    //     console.log(res)
+    //     const data = res.data.data
 
-    wx.request({
-      url: `https://api.shanbay.com/bdc/search/?word=${content}`,
-      data: {},
-      method: 'GET',
-      success: res => {
+    //     this.setData({
+    //       content: data.content,
+    //       audioUrl: data.us_audio,
+    //       pron: data.pron,
+    //       definition: data.definition
+    //     })
 
-        const data = res.data.data
-
-        this.setData({
-          content: data.content,
-          audioUrl: data.us_audio,
-          pron: data.pron,
-          definition: data.definition
-        })
-        innerAudioContext.src = audioUrl
-      }
-    })
+    //     innerAudioContext.src = audioUrl
+    //   }
+    // })
   },
 
-  read: () => {
+  read: function(){
     if (this.data.audioUrl) {
+      console.log(this.data.audioUrl)
+      innerAudioContext.src = this.data.audioUrl
       innerAudioContext.play()
     }
   }

@@ -37,8 +37,9 @@ Page({
     const date = new Date()
     const seperator1 = "-"
     const seperator2 = ":"
-    const month = date.getMonth() + 1
-    const strDate = date.getDate()
+    var month = date.getMonth() + 1
+    var strDate = date.getDate()
+    console.log('month: ', month)
     if (month >= 1 && month <= 9) {
       month = "0" + month
     }

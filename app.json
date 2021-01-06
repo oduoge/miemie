@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/word/word",
     "pages/search/search",
     "pages/settings/settings",
@@ -9,32 +9,35 @@
     "pages/settings/feedback/feedback"
   ],
   "tabBar": {
-    "backgroundColor" : "#F7F7FA",
+    "backgroundColor": "#F7F7FA",
     "borderStyle": "white",
-    "list": [{
-      "pagePath": "pages/word/word",
-      "text": "单词",
-      "iconPath": "images/home.png",
-      "selectedIconPath": "images/home-selected.png"
-    },
-    {
-      "pagePath": "pages/search/search",
-      "text": "辞典",
-      "iconPath": "images/search.png",
-      "selectedIconPath": "images/search-selected.png"
-    },
-    {
-      "pagePath": "pages/settings/settings",
-      "text": "设置",
-      "iconPath": "images/settings.png",
-      "selectedIconPath": "images/settings-selected.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/word/word",
+        "text": "单词",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-selected.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "辞典",
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/search-selected.png"
+      },
+      {
+        "pagePath": "pages/settings/settings",
+        "text": "设置",
+        "iconPath": "images/settings.png",
+        "selectedIconPath": "images/settings-selected.png"
+      }
+    ]
   },
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "backgroundColor": "#EFEFF4",
     "navigationBarBackgroundColor": "#2C2D31",
-    "navigationBarTitleText": "咩咩单词",
-    "navigationBarTextStyle":"white"
-  }
+    "navigationBarTitleText": "啊呀单词本",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
 }

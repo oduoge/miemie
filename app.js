@@ -1,6 +1,6 @@
 // app.js
 
-const hotapp = require('./utils/hotapp.js')
+// const hotapp = require('./utils/hotapp.js')
 // hotapp.setDebug(true)
 
 const wilddog = require('./utils/wilddog-weapp-all.js')
@@ -16,7 +16,7 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    wilddog.initializeApp(config)
+    // wilddog.initializeApp(config)
   },
   getUserInfo: cb => {
     if (this.globalData.userInfo) {
