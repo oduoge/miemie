@@ -36,8 +36,14 @@
     "backgroundTextStyle": "light",
     "backgroundColor": "#EFEFF4",
     "navigationBarBackgroundColor": "#2C2D31",
-    "navigationBarTitleText": "啊呀单词本",
+    "navigationBarTitleText": "啊呀单词",
     "navigationBarTextStyle": "white"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "@vant/weapp/dropdown-item/index"
+  }
 }
