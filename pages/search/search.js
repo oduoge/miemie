@@ -1,5 +1,6 @@
 Page({
   data: {
+    imgUrl: '/images/fake/joke.png'
   },
 
   search: e => {
@@ -35,6 +36,24 @@ Page({
       title: '提示',
       content: '输入单词后点击回车键即可查询',
       showCancel: false
+    })
+  },
+
+  onLoad: function(options) {
+    wx.request({
+      url: 'https://api.ixiaowai.cn/gqapi/gqapi.php?return=json',
+      data: {},
+      method: 'GET',
+      success: res => {
+        console.log(res.data)
+        if ('200' == res.data.code) {
+          this.setData({
+            imgUrl: res.data.imgurl
+          })
+        } else {
+
+        }
+      }
     })
   }
 })
