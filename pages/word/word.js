@@ -1,5 +1,5 @@
 const list = require('../../data/word-list.js')
-const vocList = require('../../data/vocabulary.js')
+// const vocList = require('../../data/vocabulary.js')
 const innerAudioContext = wx.createInnerAudioContext()
 
 Page({
@@ -9,7 +9,8 @@ Page({
     definition: null,
     audioUrl: null,
     worldListMax: 999,
-    vocListMax: 12346
+    vocListMax: 12346,
+    showNot: false,
   },
 
   onLoad: function(options) {
@@ -27,9 +28,12 @@ Page({
     })
   },
 
-  show: () => {
+  show: function(option) {
+    let that = this
+    let mshowNot = !that.data.showNot
+    console.log(mshowNot)
     this.setData({
-      showNot: true
+      showNot: mshowNot
     })
   },
 
