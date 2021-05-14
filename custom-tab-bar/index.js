@@ -6,25 +6,29 @@ Component({
         "pagePath": "/pages/home/home",
         "text": "首页",
         "iconPath": "images/home.png",
-        "selectedIconPath": "images/home-selected.png"
+        "selectedIconPath": "images/home-selected.png",
+        "icon": "wap-home"
       },
       {
         "pagePath": "/pages/word/word",
         "text": "单词",
         "iconPath": "images/home.png",
-        "selectedIconPath": "images/home-selected.png"
+        "selectedIconPath": "images/home-selected.png",
+        "icon": "search"
       },
       {
-        "pagePath": "/pages/search/search",
-        "text": "辞典",
+        "pagePath": "/pages/card/card",
+        "text": "卡包",
         "iconPath": "images/search.png",
-        "selectedIconPath": "images/search-selected.png"
+        "selectedIconPath": "images/search-selected.png",
+        "icon": "card"
       },
       {
         "pagePath": "/pages/settings/settings",
-        "text": "设置",
+        "text": "我的",
         "iconPath": "images/settings.png",
-        "selectedIconPath": "images/settings-selected.png"
+        "selectedIconPath": "images/settings-selected.png",
+        "icon": "manager"
       }
     ]
   },

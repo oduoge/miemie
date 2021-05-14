@@ -24,19 +24,15 @@
       },
       {
         "pagePath": "pages/word/word",
-        "text": "单词",
-        "iconPath": "images/home.png",
-        "selectedIconPath": "images/home-selected.png"
+        "text": "单词"
       },
       {
-        "pagePath": "pages/search/search",
-        "text": "辞典",
-        "iconPath": "images/search.png",
-        "selectedIconPath": "images/search-selected.png"
+        "pagePath": "pages/card/card",
+        "text": "卡包"
       },
       {
         "pagePath": "pages/settings/settings",
-        "text": "设置",
+        "text": "我的",
         "iconPath": "images/settings.png",
         "selectedIconPath": "images/settings-selected.png"
       }
@@ -46,7 +42,7 @@
     "backgroundTextStyle": "light",
     "backgroundColor": "#EFEFF4",
     "navigationBarBackgroundColor": "#2C2D31",
-    "navigationBarTitleText": "啊呀单词",
+    "navigationBarTitleText": "晓记",
     "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
