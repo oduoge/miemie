@@ -35,6 +35,17 @@ Page({
     this.setData({
       showNot: mshowNot
     })
+
+
+  },
+
+  onShow() {
+    let that = this
+    if (typeof that.getTabBar === 'function' && this.getTabBar()) {
+      that.getTabBar().setData({
+        active: 1
+      })
+    }
   },
 
   next: function(options) {

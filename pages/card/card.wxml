@@ -1,2 +1,3 @@
-<!--pages/card/card.wxml-->
-<text>pages/card/card.wxml</text>
+<view class="container">
+  <image style="width: 100%; height: 150px;" src="/images/defaultlogo-4.png" />
+</view>

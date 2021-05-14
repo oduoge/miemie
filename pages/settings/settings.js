@@ -22,5 +22,16 @@ Page({
     wx.navigateTo({
       url: './feedback/feedback'
     })
+  },
+
+  onShow() {
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        active: 3
+      })
+    }
   }
+  
+
 })

@@ -10,7 +10,7 @@
     </swiper>
 
     <van-grid>
-      <van-grid-item icon="photo-o" text="文字" />
+      <van-grid-item icon="hot" text="热门" color="red" />
       <van-grid-item icon="photo-o" text="文字" />
       <van-grid-item icon="photo-o" text="文字" />
       <van-grid-item icon="photo-o" text="文字" />
@@ -37,9 +37,3 @@
     </view>  
   </view>
 </view>
-<van-tabbar class="my-item" active="{{ active }}" bind:change="onChange">
-  <van-tabbar-item icon="wap-home">标签</van-tabbar-item>
-  <van-tabbar-item icon="search">标签</van-tabbar-item>
-  <van-tabbar-item icon="friends">标签</van-tabbar-item>
-  <van-tabbar-item icon="setting">标签</van-tabbar-item>
-</van-tabbar>

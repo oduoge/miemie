@@ -70,5 +70,13 @@ Page({
       option1: op1,
       option2: op1
     })
+  },
+  onShow() {
+    let that = this
+    if (typeof that.getTabBar === 'function' && this.getTabBar()) {
+      that.getTabBar().setData({
+        active: 2
+      })
+    }
   }
 })

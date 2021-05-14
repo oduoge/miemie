@@ -8,12 +8,20 @@
     "pages/settings/clause/clause",
     "pages/settings/help/help",
     "pages/settings/feedback/feedback",
-    "pages/card/card"
+    "pages/card/card",
+    "custom-tab-bar/index"
   ],
   "tabBar": {
+    "custom": true,
     "backgroundColor": "#F7F7FA",
     "borderStyle": "white",
     "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-selected.png"
+      },
       {
         "pagePath": "pages/word/word",
         "text": "单词",

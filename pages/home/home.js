@@ -35,7 +35,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let that = this
+    if (typeof that.getTabBar === 'function' && this.getTabBar()) {
+      that.getTabBar().setData({
+        active: 0
+      })
+    }
   },
 
   /**
