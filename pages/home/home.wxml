@@ -1,0 +1,45 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <view class="page-body">
+    <swiper class="swiper" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
+      <block wx:for="{{imgUrls}}" wx:key="index">
+        <swiper-item>
+          <image class="swiper-image" src="{{item}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <van-grid>
+      <van-grid-item icon="photo-o" text="文字" />
+      <van-grid-item icon="photo-o" text="文字" />
+      <van-grid-item icon="photo-o" text="文字" />
+      <van-grid-item icon="photo-o" text="文字" />
+    </van-grid>
+
+    <view class="card-view">
+      <block wx:for="{{imgUrls}}" wx:key="index">
+        <van-card
+          num="2"
+          tag="标签"
+          price="10.00"
+          desc="描述信息"
+          title="商品标题"
+          thumb="{{ item }}"
+          class="my-card"
+        >
+          <view slot="footer">
+            <van-button size="mini">按钮</van-button>
+            <van-button size="mini">按钮</van-button>
+          </view>
+        </van-card>
+      </block>
+
+    </view>  
+  </view>
+</view>
+<van-tabbar class="my-item" active="{{ active }}" bind:change="onChange">
+  <van-tabbar-item icon="wap-home">标签</van-tabbar-item>
+  <van-tabbar-item icon="search">标签</van-tabbar-item>
+  <van-tabbar-item icon="friends">标签</van-tabbar-item>
+  <van-tabbar-item icon="setting">标签</van-tabbar-item>
+</van-tabbar>

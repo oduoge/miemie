@@ -41,7 +41,7 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.14.1",
+  "libVersion": "2.16.1",
   "appid": "wx139209d3f7955775",
   "projectname": "miemie",
   "debugOptions": {

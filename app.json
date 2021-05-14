@@ -1,12 +1,14 @@
 {
   "pages": [
+    "pages/home/home",
     "pages/word/word",
     "pages/search/search",
     "pages/settings/settings",
     "pages/search/detail/detail",
     "pages/settings/clause/clause",
     "pages/settings/help/help",
-    "pages/settings/feedback/feedback"
+    "pages/settings/feedback/feedback",
+    "pages/card/card"
   ],
   "tabBar": {
     "backgroundColor": "#F7F7FA",
@@ -44,6 +46,11 @@
     "van-button": "@vant/weapp/button/index",
     "van-action-sheet": "@vant/weapp/action-sheet/index",
     "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
-    "van-dropdown-item": "@vant/weapp/dropdown-item/index"
+    "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-card": "@vant/weapp/card/index"
   }
 }
