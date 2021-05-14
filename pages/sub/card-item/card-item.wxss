@@ -1,0 +1,16 @@
+.my-card-item {
+  width: 100%;
+}
+
+
+.my-content {
+  --cell-font-size: 15px;
+}
+
+
+.my-ans {
+  text-indent: 2em;
+  --cell-label-font-size: 15px;
+  --cell-label-color: #000;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

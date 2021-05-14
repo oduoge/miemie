@@ -1,1 +1,5 @@
 /* custom-tab-bar/index.wxss */
+
+.my-item {
+  --tabbar-item-active-color: #24c68a;
+}

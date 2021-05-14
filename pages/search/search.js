@@ -72,11 +72,5 @@ Page({
     })
   },
   onShow() {
-    let that = this
-    if (typeof that.getTabBar === 'function' && this.getTabBar()) {
-      that.getTabBar().setData({
-        active: 2
-      })
-    }
   }
 })

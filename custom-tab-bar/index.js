@@ -14,7 +14,7 @@ Component({
         "text": "单词",
         "iconPath": "images/home.png",
         "selectedIconPath": "images/home-selected.png",
-        "icon": "search"
+        "icon": "column"
       },
       {
         "pagePath": "/pages/card/card",
@@ -38,9 +38,7 @@ Component({
   methods: {
     onChange(event) {
       let that = this
-
       const url = that.data.list[ event.detail].pagePath
-      console.log(that.data.active)
       wx.switchTab({url})
     },
   }

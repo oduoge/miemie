@@ -3,3 +3,7 @@
   height: 400rpx;
   width: 100%;
 }
+
+.my-grid {
+  width: 100%;
+}

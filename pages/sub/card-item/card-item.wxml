@@ -1,0 +1,18 @@
+<view class="my-card-item">
+  <van-nav-bar title="{{catogray}}" left-text="返回" left-arrow
+     bind:click-left="onClickLeft"
+     bind:click-right="onClickRight"
+  >
+    <van-icon name="search" slot="right" />
+  </van-nav-bar>
+
+  <van-panel class="my-content" title="什么是惊喜？" desc="到底什么是惊喜？" status="已学" use-footer-slot>
+    <view slot="footer">
+      <van-button size="small" bind:click="clickShowAns">{{!showAns ? '答案' : '隐藏'}}</van-button>
+      <van-button size="small">下一个</van-button>
+    </view>
+  </van-panel>
+
+  <van-panel class="my-ans" wx:if="{{showAns}}" desc="{{ ans }}">
+  </van-panel>
+</view>

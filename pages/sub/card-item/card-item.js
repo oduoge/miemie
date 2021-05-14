@@ -1,18 +1,28 @@
-// pages/card/card.js
+// pages/sub/card-item/card-item.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    catogray: '',
+    showAns: false, 
+    ans: '惊喜，汉语词汇，拼音是jīng xǐ，意思是丝毫不加节制地表露欢乐、热情和惊奇，出自《后汉书·袁敞传》。反义词为失落，近义词为欣喜。',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
+    this.setData({
+      catogray: options.title
+    })
+  },
 
+  clickShowAns: function(e) {
+    let showAns = !this.data.showAns
+    this.setData({showAns: showAns})
   },
 
   /**
@@ -26,12 +36,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let that = this
-    if (typeof that.getTabBar === 'function' && this.getTabBar()) {
-      that.getTabBar().setData({
-        active: 2
-      })
-    }
+
   },
 
   /**
@@ -69,12 +74,7 @@ Page({
 
   },
 
-  onClick: function(e) {
-    console.log('index: ', e.currentTarget.dataset.index)
-    let url = '/pages/sub/card-item/card-item?test=1&title=' + e.currentTarget.dataset.index
-    console.log('url: ', url)
-    wx.navigateTo({
-      url: url
-    })
+  onClickLeft: function() {
+    wx.navigateBack()
   }
 })

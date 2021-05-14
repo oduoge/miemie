@@ -1,3 +1,14 @@
 <view class="container">
   <image class="my-image" src="/images/defaultlogo-4.png" />
+
+  <van-grid column-num="3" border="{{ false }}" class="my-grid">
+    <van-grid-item use-slot wx:for="{{ 3 }}" wx:for-item="index" wx:key="index">
+      <image
+        style="width: 100%; height: 90px;"
+        src="https://img.yzcdn.cn/vant/apple-{{ index + 1 }}.jpg"
+       bind:tap="onClick"
+       data-index="apple{{index}}"
+      />
+    </van-grid-item>
+  </van-grid>
 </view>
